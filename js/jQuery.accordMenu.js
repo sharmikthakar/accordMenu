@@ -4,13 +4,13 @@
         accordMenu: function(options) { 
             //Set the default values, use comma to separate the settings, example:
             var defaults = {	
-				colors: 2,
+				colors: 1,
 				keepParentOpen: false,
 				keepSiblingsOpen: true,
 				animation: 'slide',
 				selClass: 'selected',
 				parentClass: 'parentLink',
-				rootClass: 'rootLink'
+				rootClass: 'rootLink'				
             }			
             var options =  $.extend(defaults, options);
 			
@@ -19,33 +19,41 @@
 			}
  
             return this.each(function() {
-                var o = options;
-                var accordian = $(this);
-				
+                var o = options;                
+                var acc = $(this).attr("class");				
 				
 				/* giving helper classes to all menu levels for easy navigation on plugin load*/
-				accordian.addClass("accordMenu");
-				$(".accordMenu>li>ul").addClass("subAccordMenu secAccordMenu");
-				$(".accordMenu ul ul").addClass("subAccordMenu terAccordMenu");				
+				;
+				$("."+acc+">li>a").next().addClass("subAccordMenu secAccordMenu");
+				$("."+acc+" ul>li>a").next().addClass("subAccordMenu terAccordMenu");								
 				
 				/* hide sub UL */
-				$(".accordMenu ul").hide();	
-                
-				$(".accordMenu li>a").live("click", function(){
+				$("."+acc+" a").next().hide();                
+				$("."+acc+" li>a").live("click", function(){
 					var obj = $(this);
 					
 					/* there can be only one selected */
-					$(".accordMenu a").removeClass(o.selClass).removeClass(o.parentClass).removeClass(o.rootClass);		
+					$("."+acc+" a").removeClass(o.selClass).removeClass(o.parentClass).removeClass(o.rootClass);		
 					
 					/* hide heirarchial menus according to options*/		
 					if (o.keepParentOpen == true){}
 					else{
 						switch(o.animation){
 							case "hide":{
-								$(this).parents(".accordMenu>li").siblings().find("ul").hide();
+								if (o.colors==3){
+									$(this).parentsUntil("."+acc+">li").siblings().find(".terAccordMenu").hide();
+								}
+								else{
+									$(this).parentsUntil("."+acc+">li").siblings().find(".secAccordMenu").hide();
+								}
 							}
 							default:{
-								$(this).parents(".accordMenu>li").siblings().find("ul").slideUp();
+								if (o.colors==3){
+									$(this).parentsUntil("."+acc+">li").siblings().find(".terAccordMenu").slideUp();
+								}
+								else if (o.colors==2){
+									$(this).parentsUntil("."+acc+">li").siblings().find(".secAccordMenu").slideUp();
+								}
 							}
 						}
 					}
@@ -54,10 +62,20 @@
 					else{
 						switch(o.animation){
 							case "hide":{
-								$(this).parentsUntil(".accordMenu>li").siblings().find(".terAccordMenu").hide();
+								if (o.colors==3){
+									$(this).parents("."+acc+">li").siblings().find(".terAccordMenu").hide();
+								}
+								else if (o.colors==2){
+									$(this).parents("."+acc+">li").siblings().find(".secAccordMenu").hide();
+								}
 							}
 							default:{
-								$(this).parentsUntil(".accordMenu>li").siblings().find(".terAccordMenu").slideUp();
+								if (o.colors==3){
+									$(this).parents("."+acc+">li").siblings().find(".terAccordMenu").slideUp();
+								}
+								else if (o.colors==2){
+									$(this).parents("."+acc+">li").siblings().find(".secAccordMenu").slideUp();
+								}
 							}
 						}
 					}

@@ -1,3 +1,8 @@
+*WARNING*
+The plugin is still under development.
+Using it will cause unexpected results.
+
+
 # [accordMenu v1.0]
 
 accordMenu is a jQuery plugin that transforms a multilevel list menu into an accordian-esque menu with immense customization options.
@@ -18,7 +23,7 @@ accordMenu works perfectly with upto 3 list levels.
 
 * colors
 Default value: 2
-Options: 2 | 3
+Options: 1 | 2 | 3
 Select the level of accordian colors that are applied to parent Links.
 
 * KeepParentOpen
