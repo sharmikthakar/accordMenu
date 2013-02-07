@@ -1,55 +1,70 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com)
+# [accordMenu v1.0]
 
-HTML5 Boilerplate is a professional front-end template that helps you build fast, robust, adaptable, and future-proof websites. Spend more time developing and less time reinventing the wheel.
+accordMenu is a jQuery plugin that transforms a multilevel list menu into an accordian-esque menu with immense customization options.
 
-This project is the product of many years of iterative development and combined community knowledge. It does not impose a specific development philosophy or framework, so you're free to architect your code in the way that you want.
-
-
-## Quick start
-
-Clone the git repo - `git clone git://github.com/h5bp/html5-boilerplate.git` - or [download it](https://github.com/h5bp/html5-boilerplate/zipball/master)
-
+accordMenu works perfectly with upto 3 list levels. 
 
 ## Features
 
-* HTML5 ready. Use the new elements with confidence.
-* Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE6+).
-* Designed with progressive enhancement in mind.
-* CSS normalizations and common bug fixes.
-* IE-specific classes for easier cross-browser control.
-* A default print stylesheet, performance optimized.
-* Mobile browser optimizations.
-* Protection against any stray `console.log` causing JavaScript errors in IE6/7.
-* The latest jQuery via CDN, with a local fallback.
-* A custom Modernizr build for feature detection.
-* An optimized Google Analytics snippet.
-* Apache server caching, compression, and other configuration defaults for Grade-A performance.
-* Cross-domain Ajax and Flash.
-* "Delete-key friendly." Easy to strip out parts you don't need.
-* Extensive inline and accompanying documentation.
+* Flexible to deploy and can be used to accomodate menu's and accordians.
+* Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE7+).
+* Designed with progressive enhancement in mind. Keeping room for additional features.
+* CSS stylesheet attached for out of the box usability.
+* Helper classes added by the plugin for easy modification.
+* Delete Friendly, feel free to strip off parts you do not reqiure.
+
+
+## Plugin Options / API
+
+* colors
+Default value: 2
+Options: 2 | 3
+Select the level of accordian colors that are applied to parent Links.
+
+* KeepParentOpen
+Default value: false
+Options: false | true
+Should the open root links be closed when clicked on another root link
+
+* KeepSiblingsOpen
+Default value: true
+Options: false | true
+Should the open sibling list be closed when clicked on a sibling link
+
+* animation
+Default value: slide
+Options: slide | hide
+Define custom animation for the list when closed.
+
+* selClass
+Default value: selected
+Options: custom
+Define custom class for selected anchor tag to apply custom styling.
+
+* rootClass
+Default value: rootLink
+Options: custom
+Define custom class for selected links root anchor tag to apply custom styling.
+
+* parentClass
+Default value: rootLink
+Options: custom
+Define custom class for selected links parent anchor tag to apply custom styling.
+
+**Note: By default the parent anchor shares the same class as the root anchor.
+If you wish to specify a different style to parent link, use colors: 3 and define custom class for parentClass.
 
 
 ## Contributing
 
-Anyone and everyone is welcome to [contribute](https://github.com/h5bp/html5-boilerplate/wiki/contribute). Hundreds of developers have helped make the HTML5 Boilerplate what it is today.
+Anyone and everyone is welcome to contribute towards enhancing the features of this plugin.
 
 
 ## Project information
 
-* Source: http://github.com/h5bp/html5-boilerplate
-* Web: http://html5boilerplate.com
-* Docs: http://html5boilerplate.com/docs
-* Twitter: http://twitter.com/h5bp
+* Source: http://github.com/sharmik/accordMenu
+* Twitter: http://twitter.com/sharmikthakar
 
 
 ## License
-
-### Major components:
-
-* jQuery: MIT/GPL license
-* Modernizr: MIT/BSD license
-* Normalize.css: Public Domain
-
-### Everything else:
-
-The Unlicense (aka: public domain)
+public domain.
