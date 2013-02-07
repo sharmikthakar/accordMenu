@@ -29,7 +29,7 @@
 				
 				/* hide sub UL */
 				$("."+acc+" a").next().hide();                
-				$("."+acc+" li>a").live("click", function(){
+				$("."+acc+" li>a").on("click", function(){
 					var obj = $(this);
 					
 					/* there can be only one selected */
@@ -84,16 +84,17 @@
 					/* toggle submenu according to the animation selected */
 					switch(o.animation){
 						case "hide":{
-							obj.next().toggle(".subAccordMenu");
+							obj.toggleClass(o.selClass).next().toggle();
 							break;
 						}
 						default:{
-							obj.next().slideToggle(".subAccordMenu");
+							obj.toggleClass(o.selClass).next().slideToggle();
 						}
 					}
 					
 					
-					obj.addClass(o.selClass).parents("ul.subAccordMenu").siblings("a").addClass(o.parentClass).parents("ul.secAccordMenu").siblings("a").removeClass(o.parentClass).addClass(o.rootClass);
+					obj.parents("ul.subAccordMenu").siblings("a").addClass(o.parentClass).parents("ul.secAccordMenu").siblings("a").removeClass(o.parentClass).addClass(o.rootClass);				
+					return false
 				});
 				
              
