@@ -18,12 +18,13 @@
 	
 	<script>
 		$(document).ready(function(){
-			$(".bmwCars").accordMenu({
-				rootClass: 'carWrap'
-			});
+			$(".bmwCars").accordMenu();
 			$(".dNoteChars").accordMenu({
-			
+				selClass: 'selected',
+				parentClass: 'parentLink',
+				rootClass: 'rootLink'				
 			});
+			$(".musicList").accordMenu();
 		});
 	</script>
 </head>
@@ -39,13 +40,13 @@
 				<li><a href="#">BMW M3</a>
 					<div>
 						<h4>BMW M3</h4>
-						<p>The BMW M3 is a high-performance version of the BMW 3-Series, developed by BMW's in-house motorsport division, BMW M. M3 models have been derived from the E30, E36, E46 and E90/E92/E93 3-series, and sold with coupé, saloon and convertible body styles.</p>
+						<p>The BMW M3 is a high-performance version of the BMW 3-Series, developed by BMW's in-house motorsport division, BMW M.</p>
 					</div>
 				</li>
 				<li><a href="#">BMW M5</a>
 					<div>
 						<h4>BMW M5</h4>
-						<p>The BMW M5 is a high performance version of the BMW 5-Series executive car built by the Motorsport division of BMW. First introduced at the Amsterdam Motor Show in 1984, the first incarnation of the M5 was hand-built utilizing the 535i chassis and a modified BMW M1 engine, being the fastest production sedan in the world at the time of its introduction</p>
+						<p>The BMW M5 is a high performance version of the BMW 5-Series executive car built by the Motorsport division of BMW. First introduced at the Amsterdam Motor Show in 1984.</p>
 					</div>
 				</li>
 				<li><a href="#">BMW M6</a>
@@ -53,6 +54,42 @@
 						<h4>BMW M6</h4>
 						<p>The BMW M6 is a high-performance version of the 6-Series automobile, designed by the motorsport division of BMW. The BMW M6 was produced from 1983 to 1989, and then 2005 to 2010.</p>
 					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="exampleWrap">
+			<h3>Accordian at default Settings</h3>
+			<ul class="musicList">
+				<li><a href="#">Automatic Playlists</a>
+					<ol>
+						<li><a href="#">Most Played Artists</a>
+							<ol>
+								<li>Iron Maiden</li>
+								<li>Epica</li>
+								<li>Eminem</li>
+								<li>Mohit Chauhan</li>
+								<li>Arcade Fire</li>
+							</ol>
+						</li>
+						<li><a href="#">Most Played Albums</a>
+							<ol>
+								<li>Encore</li>
+								<li>No Prayer for the Dying</li>
+								<li>Live at Metal Camp</li>
+								<li>The Phantom Agony</li>
+								<li>Rockstar</li>
+							</ol>
+						</li>
+						<li><a href="#">Most Played Artists</a>
+							<ol>
+								<li>Not Afraid</li>
+								<li>Death Note</li>
+								<li>Nadaan Parindey</li>
+								<li>Death of a Dream</li>
+								<li>Sprawl II (Mountains Beyond Mountains)</li>
+							</ol>
+						</li>
+					</ol>
 				</li>
 			</ul>
 		</div>

@@ -24,10 +24,12 @@ a{font-family:segoe ui, verdana, arial; font-size:1em; line-height:1.6em; text-d
 .exampleWrap{background:#fafafa; border-radius:5px; box-shadow: 0 0 5px #333; width:25%; padding:0.6em 0.6em 0.6em 2.2em; margin:1.2em auto;}
 
 
-/* accordian styles */
-.accordMenu{}
-.secAccordMenu {margin-left:1.2em;}
-.terAccordMenu {margin-left:1.2em;}
-.rootLink{background:#059BBC;}
-.parentLink{background:#79C471;}		
-.selected{background:#F04E2A;}
+/* styling for death note characters */
+.dNoteChars .subAccordMenu {margin-left:1.2em;}
+.dNoteChars .rootLink{background:#059BBC;}
+.dNoteChars .parentLink{background:#79C471;}		
+.dNoteChars .selected{background:#F04E2A;}
+
+
+/* styling for BMW cars accordian */
+.bmwCars .selected{text-decoration:underline; color:#059BBC;}

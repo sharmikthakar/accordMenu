@@ -1,30 +1,23 @@
-*WARNING*
-The plugin is still under development.
-Using it will cause unexpected results.
+## accordMenu v1.0
 
+accordMenu is a jQuery plugin that transforms a multilevel list menu into an accordian and/or menu with immense customization options.
+accordMenu works perfectly with upto 3 list levels.
 
-# [accordMenu v1.0]
-
-accordMenu is a jQuery plugin that transforms a multilevel list menu into an accordian-esque menu with immense customization options.
-
-accordMenu works perfectly with upto 3 list levels. 
+get the latest build from: http://github.com/sharmik/accordMenu
 
 ## Features
 
-* Flexible to deploy and can be used to accomodate menu's and accordians.
+* Intelligently detects list heirarchy and adapts to any ordered and unordered list.
 * Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE7+).
+* 3 CSS styles added for out of the box customization.
+* Manage selected link styles on all heirarchy by adding relevant classes.
+* Control over closing/opening behavior of accordian siblings and parents.
+* Slide or Hide your content with animation
+* Light weight 1.5Kb when minified.
 * Designed with progressive enhancement in mind. Keeping room for additional features.
-* CSS stylesheet attached for out of the box usability.
-* Helper classes added by the plugin for easy modification.
-* Delete Friendly, feel free to strip off parts you do not reqiure.
 
 
 ## Plugin Options / API
-
-* colors
-Default value: 2
-Options: 1 | 2 | 3
-Select the level of accordian colors that are applied to parent Links.
 
 * KeepParentOpen
 Default value: false
@@ -41,23 +34,20 @@ Default value: slide
 Options: slide | hide
 Define custom animation for the list when closed.
 
-* selClass
+* selLink
 Default value: selected
 Options: custom
 Define custom class for selected anchor tag to apply custom styling.
 
-* rootClass
+* mainLink
 Default value: rootLink
 Options: custom
 Define custom class for selected links root anchor tag to apply custom styling.
 
-* parentClass
+* parLink
 Default value: rootLink
 Options: custom
 Define custom class for selected links parent anchor tag to apply custom styling.
-
-**Note: By default the parent anchor shares the same class as the root anchor.
-If you wish to specify a different style to parent link, use colors: 3 and define custom class for parentClass.
 
 
 ## Contributing
@@ -69,7 +59,35 @@ Anyone and everyone is welcome to contribute towards enhancing the features of t
 
 * Source: http://github.com/sharmik/accordMenu
 * Twitter: http://twitter.com/sharmikthakar
+* Ideas / Found Bug? Log an issue at http://github.com/sharmik/accordMenu
+
+## Next Build v2
+
+* Autoplay features.
+* Horizontal Accordian option.
+* Public functions.
 
 
 ## License
-public domain.
+MIT License
+
+Copyright (c) Sharmik Thakar.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
