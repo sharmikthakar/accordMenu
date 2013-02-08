@@ -18,8 +18,12 @@
 	
 	<script>
 		$(document).ready(function(){
-			$(".bmwCars").accordMenu();
-			$(".dNoteChars").accordMenu();
+			$(".bmwCars").accordMenu({
+				rootClass: 'carWrap'
+			});
+			$(".dNoteChars").accordMenu({
+			
+			});
 		});
 	</script>
 </head>

@@ -3,18 +3,17 @@
         //pass the options variable to the function
         accordMenu: function(options) { 
             //Set the default values, use comma to separate the settings, example:
-            var defaults = {	
-				colors: 1,
+            var defaults = {
 				keepParentOpen: false,
-				keepSiblingsOpen: true,
+				keepSiblingsOpen: false,
 				animation: 'slide',
 				selClass: 'selected',
-				parentClass: 'parentLink',
-				rootClass: 'rootLink'				
+				parentClass: '',
+				rootClass: ''				
             }			
             var options =  $.extend(defaults, options);
 			
-			if (defaults.colors==2){				
+			if (options.parentClass==''){				
 				defaults.parentClass = defaults.rootClass;
 			}
  
@@ -39,21 +38,11 @@
 					if (o.keepParentOpen == true){}
 					else{
 						switch(o.animation){
-							case "hide":{
-								if (o.colors==3){
-									$(this).parentsUntil("."+acc+">li").siblings().find(".terAccordMenu").hide();
-								}
-								else{
-									$(this).parentsUntil("."+acc+">li").siblings().find(".secAccordMenu").hide();
-								}
+							case "hide":{								
+								$(this).parentsUntil("."+acc+">li").siblings().find(".subAccordMenu").hide();
 							}
 							default:{
-								if (o.colors==3){
-									$(this).parentsUntil("."+acc+">li").siblings().find(".terAccordMenu").slideUp();
-								}
-								else if (o.colors==2){
-									$(this).parentsUntil("."+acc+">li").siblings().find(".secAccordMenu").slideUp();
-								}
+								$(this).parentsUntil("."+acc+">li").siblings().find(".subAccordMenu").slideUp();
 							}
 						}
 					}
@@ -62,20 +51,10 @@
 					else{
 						switch(o.animation){
 							case "hide":{
-								if (o.colors==3){
-									$(this).parents("."+acc+">li").siblings().find(".terAccordMenu").hide();
-								}
-								else if (o.colors==2){
-									$(this).parents("."+acc+">li").siblings().find(".secAccordMenu").hide();
-								}
+								$(this).parents("."+acc+">li").siblings().find(".subAccordMenu").hide();
 							}
 							default:{
-								if (o.colors==3){
-									$(this).parents("."+acc+">li").siblings().find(".terAccordMenu").slideUp();
-								}
-								else if (o.colors==2){
-									$(this).parents("."+acc+">li").siblings().find(".secAccordMenu").slideUp();
-								}
+								$(this).parents("."+acc+">li").siblings().find(".subAccordMenu").slideUp();
 							}
 						}
 					}
@@ -84,11 +63,25 @@
 					/* toggle submenu according to the animation selected */
 					switch(o.animation){
 						case "hide":{
-							obj.toggleClass(o.selClass).next().toggle();
+							if (obj.hasClass(o.selClass)){
+								obj.next().toggle();
+								obj.removeClass(o.selClass);
+							}
+							else{
+								obj.next().toggle();
+								obj.addClass(o.selClass);
+							}
 							break;
 						}
 						default:{
-							obj.toggleClass(o.selClass).next().slideToggle();
+							if (obj.hasClass(o.selClass)){
+								obj.next().slideToggle();
+								obj.removeClass(o.selClass);
+							}
+							else{
+								obj.next().slideToggle();
+								obj.addClass(o.selClass);
+							}
 						}
 					}
 					
