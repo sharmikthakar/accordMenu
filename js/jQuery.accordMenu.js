@@ -6,7 +6,7 @@
             var defaults = {
 				keepParentOpen: false,
 				keepSiblingsOpen: false,
-				keepChildrenOpen: true, // functionality pending
+				retainOpen: false, // functionality pending
 				animation: 'slide',
 				selLink: 'selected',
 				parLink: '',
@@ -39,10 +39,10 @@
 					else{
 						switch(o.animation){
 							case "hide":{								
-								$(this).parentsUntil("."+acc+">li").siblings().find(".subAccordMenu").hide();
+								obj.parentsUntil("."+acc+">li").siblings().find(".subAccordMenu").hide();								
 							}
 							default:{
-								$(this).parentsUntil("."+acc+">li").siblings().find(".subAccordMenu").slideUp();
+								obj.parentsUntil("."+acc+">li").siblings().find(".subAccordMenu").slideUp();
 							}
 						}
 					}
@@ -51,10 +51,22 @@
 					else{
 						switch(o.animation){
 							case "hide":{
-								$(this).parents("."+acc+">li").siblings().find(".subAccordMenu").hide();
+								obj.parents("."+acc+">li").siblings().find(".subAccordMenu").hide();
 							}
 							default:{
-								$(this).parents("."+acc+">li").siblings().find(".subAccordMenu").slideUp();
+								obj.parents("."+acc+">li").siblings().find(".subAccordMenu").slideUp();
+							}
+						}
+					}
+					
+					if (o.retainOpen == true){}
+					else{
+						switch(o.animation){
+							case "hide":{								
+								obj.siblings().find(".subAccordMenu").hide();
+							}
+							default:{								
+								obj.siblings().find(".subAccordMenu").slideUp();
 							}
 						}
 					}

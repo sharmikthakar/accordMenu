@@ -1,7 +1,6 @@
 ## accordMenu v1.0
 
 accordMenu is a jQuery plugin that transforms a multilevel list menu into an accordian and/or menu with immense customization options.
-accordMenu works perfectly with upto 3 list levels.
 
 get the latest build from: http://github.com/sharmik/accordMenu
 
@@ -9,8 +8,8 @@ get the latest build from: http://github.com/sharmik/accordMenu
 
 * Intelligently detects list heirarchy and adapts to any ordered and unordered list.
 * Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE7+).
-* 3 CSS styles added for out of the box customization.
-* Manage selected link styles on all heirarchy by adding relevant classes.
+* 3 CSS styles added for out of the box use.
+* Manage Selected heirarchy links for upto 3 levels by adding custom classes to root link, parent link and selected link.
 * Control over closing/opening behavior of accordian siblings and parents.
 * Slide or Hide your content with animation
 * Light weight 1.5Kb when minified.
@@ -28,6 +27,11 @@ Should the open root links be closed when clicked on another root link
 Default value: true
 Options: false | true
 Should the open sibling list be closed when clicked on a sibling link
+
+* retainOpen
+Default value: false
+Options: false | true
+Retain opened lists when moving up the heirarchy or switching root links
 
 * animation
 Default value: slide

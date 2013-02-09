@@ -1,4 +1,5 @@
 *{margin:0;padding:0; border-collapse:collapse; text-decoration:none;}
+li{list-style:none;}
 img,fieldset{border:none;}
 body {line-height: 1.5em; font-size: 1em;font-family: Segoe UI, Helvetica, Sans-Serif; color: #333;}
 img {vertical-align: middle;}
@@ -35,6 +36,10 @@ a{font-family:segoe ui, verdana, arial; font-size:1em; line-height:1.6em; text-d
 
 /* styling for BMW cars accordian */
 .bmwCars .selected{text-decoration:underline; color:#059BBC;}
+
+/* music list */
+.musicList
+
 
 
 /* tree styles */
