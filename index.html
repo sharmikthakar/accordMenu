@@ -21,10 +21,19 @@
 			$(".bmwCars").accordMenu();
 			$(".dNoteChars").accordMenu({
 				selClass: 'selected',
-				parentClass: 'parentLink',
-				rootClass: 'rootLink'				
+				parLink: 'parentLink',
+				mainLink: 'rootLink'				
 			});
-			$(".musicList").accordMenu();
+			$(".musicList").accordMenu({
+				selLink: 'selected'
+				
+			});
+			$(".treeHeirarchy").accordMenu({
+				keepParentOpen: true,
+				keepSiblingsOpen: true,
+				animation: 'slide',
+				selLink: 'selected'
+			});
 		});
 	</script>
 </head>
@@ -64,29 +73,29 @@
 					<ol>
 						<li><a href="#">Most Played Artists</a>
 							<ol>
-								<li>Iron Maiden</li>
-								<li>Epica</li>
-								<li>Eminem</li>
-								<li>Mohit Chauhan</li>
-								<li>Arcade Fire</li>
+								<li><a href="#">Iron Maiden</a></li>
+								<li><a href="#">Epica</a></li>
+								<li><a href="#">Eminem</a></li>
+								<li><a href="#">Mohit Chauhan</a></li>
+								<li><a href="#">Arcade Fire</a></li>
 							</ol>
 						</li>
 						<li><a href="#">Most Played Albums</a>
 							<ol>
-								<li>Encore</li>
-								<li>No Prayer for the Dying</li>
-								<li>Live at Metal Camp</li>
-								<li>The Phantom Agony</li>
-								<li>Rockstar</li>
+								<li><a href="#">Encore</a></li>
+								<li><a href="#">No Prayer for the Dying</a></li>
+								<li><a href="#">Live at Metal Camp</a></li>
+								<li><a href="#">The Phantom Agony</a></li>
+								<li><a href="#">Rockstar</a></li>
 							</ol>
 						</li>
 						<li><a href="#">Most Played Artists</a>
 							<ol>
-								<li>Not Afraid</li>
-								<li>Death Note</li>
-								<li>Nadaan Parindey</li>
-								<li>Death of a Dream</li>
-								<li>Sprawl II (Mountains Beyond Mountains)</li>
+								<li><a href="#">Not Afraid</a></li>
+								<li><a href="#">Death Note</a></li>
+								<li><a href="#">Nadaan Parindey</a></li>
+								<li><a href="#">Death of a Dream</a></li>
+								<li><a href="#">Sprawl II (Mountains Beyond Mountains)</a></li>
 							</ol>
 						</li>
 					</ol>
@@ -128,6 +137,70 @@
 							</ul>
 						</li>
 						<li><a href="#">Accounts</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="exampleWrap">
+			<h3>accordMenu as a Tree</h3>
+			<ul class="treeHeirarchy">
+				<li><a class="library" href="#">Documents</a>
+					<ul>
+						<li><a class="folder" href="#">Downloads</a>
+							<ul>
+								<li><a class="folder" href="#">Games</a>
+									<ul>
+										<li><a class="folder" href="#">Gears of War</a>
+											<ul>
+												<li><a class="exe" href="#">setup.exe</a></li>
+												<li><a class="file" href="#">settings.ini</a></li>
+												<li><a class="folder" href="#">system</a>
+													<ul>
+														<li><a class="file" href="#">data</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><a class="folder" href="#">LF2</a>
+											<ul>
+												<li><a class="exe" href="#">setup.exe</a></li>
+											</ul>
+										</li>
+										<li><a class="folder" href="#">Slender Man</a>
+											<ul>
+												<li><a class="exe" href="#">setup.exe</a></li>
+												<li><a class="file" href="#">settings.ini</a></li>
+												<li><a class="folder" href="#">system</a>
+													<ul>
+														<li><a class="file" href="#">data</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a class="folder" href="#">PDF's</a>
+									<ul>
+										<li><a class="pdf" href="#">12-14 Colors.pdf</a></li>
+										<li><a class="folder" href="#">Game Dev.</a>
+											<ul>
+												<li><a class="pdf" href="#">Core HTML5 Canvas.pdf</a></li>
+												<li><a class="pdf" href="#">Learning Cocos2d.pdf</a></li>
+												<li><a class="pdf" href="#">Game Development using HTML5 and JavaScript</a></li>
+											</ul>
+										</li>
+										<li><a class="folder" href="#">Zip files</a>
+											<ul>
+												<li><a class="zip" href="#">zen-7.x-5.1.zip</a></li>
+												<li><a class="zip" href="#">jquery.accordMenu.js.zip</a></li>
+												<li><a class="zip" href="#">juanCommerce.zip</a></li>
+												<li><a class="zip" href="#">All Torrent Downloads.zip</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>						
 					</ul>
 				</li>
 			</ul>

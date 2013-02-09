@@ -21,11 +21,13 @@ h1{font-size:2.3em; line-height: 1.8em; text-align:center; text-shadow:1px 1px 1
 h2{font-size:1.2em; line-height: 1.2em; text-align:center; text-shadow:1px 1px 1px #fafafa;}
 h3{font-size:1.2em; line-height: 1.2em; text-align:center; text-shadow:1px 1px 1px #fafafa; margin-bottom:0.5em;}
 a{font-family:segoe ui, verdana, arial; font-size:1em; line-height:1.6em; text-decoration:none; color:#111; padding:0.1em 0.4em;}
-.exampleWrap{background:#fafafa; border-radius:5px; box-shadow: 0 0 5px #333; width:25%; padding:0.6em 0.6em 0.6em 2.2em; margin:1.2em auto;}
+.exampleWrap{background:#fafafa; width:25%; padding:0.6em 0.6em 0.6em 2.2em; margin:1.2em auto;}
 
 
 /* styling for death note characters */
 .dNoteChars .subAccordMenu {margin-left:1.2em;}
+.treeHeirarchy .subAccordMenu {margin-left:1.2em;}
+.musicList .subAccordMenu {margin-left:1.2em;}
 .dNoteChars .rootLink{background:#059BBC;}
 .dNoteChars .parentLink{background:#79C471;}		
 .dNoteChars .selected{background:#F04E2A;}
@@ -33,3 +35,18 @@ a{font-family:segoe ui, verdana, arial; font-size:1em; line-height:1.6em; text-d
 
 /* styling for BMW cars accordian */
 .bmwCars .selected{text-decoration:underline; color:#059BBC;}
+
+
+/* tree styles */
+.treeHeirarchy li{list-style:none;}
+.treeHeirarchy a{padding:10px 10px 10px 35px; display:inline-block;}
+
+.treeHeirarchy .library{background:url(../img/tree/lib.png) no-repeat left center;}
+.treeHeirarchy .folder{background:url(../img/tree/folder.png) no-repeat left center;}
+.treeHeirarchy .file{background:url(../img/tree/file.png) no-repeat left center;}
+.treeHeirarchy .zip{background:url(../img/tree/zip.png) no-repeat left center;}
+.treeHeirarchy .exe{background:url(../img/tree/exe.png) no-repeat left center;}
+.treeHeirarchy .pdf{background:url(../img/tree/pdf.png) no-repeat left center;}
+.treeHeirarchy .parentLink{border: 1px solid #79C471 !important;}		
+.treeHeirarchy .rootLink{border: 1px solid #059BBC !important;}
+.treeHeirarchy .selected{background-color:#DBE9F2 !important; border:1px solid #3872C4}

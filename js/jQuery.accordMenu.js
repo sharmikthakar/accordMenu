@@ -6,10 +6,11 @@
             var defaults = {
 				keepParentOpen: false,
 				keepSiblingsOpen: false,
+				keepChildrenOpen: true, // functionality pending
 				animation: 'slide',
 				selLink: 'selected',
 				parLink: '',
-				mainLink: ''				
+				mainLink: ''
             }			
             var options =  $.extend(defaults, options);
 			
@@ -85,7 +86,7 @@
 					}
 					
 					
-					obj.parents("ul.subAccordMenu").siblings("a").addClass(o.parLink).parents("ul.subAccordMenu").siblings("a").removeClass(o.parLink).addClass(o.mainLink);				
+					obj.parents(".subAccordMenu").siblings("a").addClass(o.parLink).parents(".subAccordMenu").siblings("a").removeClass(o.parLink).addClass(o.mainLink);				
 					return false
 				});
 				
