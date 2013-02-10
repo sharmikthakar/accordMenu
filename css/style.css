@@ -1,10 +1,10 @@
 *{margin:0;padding:0; border-collapse:collapse; text-decoration:none;}
 li{list-style:none;}
 img,fieldset{border:none;}
-body {line-height: 1.5em; font-size: 1em;font-family: Segoe UI, Helvetica, Sans-Serif; color: #333;}
+body {line-height: 15px; font-size: 13px;font-family: Segoe UI, Helvetica, Sans-Serif; color: #333;}
 img {vertical-align: middle;}
 textarea {resize: vertical;}
-a:hover{text-decoration:underline; color:#111;}
+a:hover{text-decoration:none; color:#111;}
 /* clearfix */
 .clearfix:before,.clearfix:after{content: " "; display: table;}
 .clearfix:after {clear: both;}
@@ -16,35 +16,89 @@ a:hover{text-decoration:underline; color:#111;}
 
 
 
-body{border-top:5px solid #F04E2A; background:#e0e0e0;}
-.wrap{width:60%; margin: 1em auto;}
-h1{font-size:2.3em; line-height: 1.8em; text-align:center; text-shadow:1px 1px 1px #fafafa;}
-h2{font-size:1.2em; line-height: 1.2em; text-align:center; text-shadow:1px 1px 1px #fafafa;}
-h3{font-size:1.2em; line-height: 1.2em; text-align:center; text-shadow:1px 1px 1px #fafafa; margin-bottom:0.5em;}
-a{font-family:segoe ui, verdana, arial; font-size:1em; line-height:1.6em; text-decoration:none; color:#111; padding:0.1em 0.4em;}
-.exampleWrap{background:#fafafa; width:25%; padding:0.6em 0.6em 0.6em 2.2em; margin:1.2em auto;}
+body{border-top:5px solid #F04E2A;}
+hgroup{background-color:#e0e0e0; padding: 15px 0;}
+h1{font-size:35px; line-height: 45px; text-align:center; text-shadow:1px 1px 1px #fafafa;}
+h2{font-size:25px; line-height: 28px; text-align:center; text-shadow:1px 1px 1px #fafafa;}
+h3{font-size:22px; line-height: 25px; text-align:center; text-shadow:1px 1px 0px #333; margin-bottom:5px; color:#e0e0e0;  font-weight:normal;}
+h4{font-size:15px; line-height: 17px; text-align:center; text-shadow:1px 1px 1px #fafafa; margin-bottom:5px; color:#666;  font-weight:normal;}
+h5{font-size:12px; line-height: 15px; text-align:center; margin-bottom:5px; color:#606060; font-weight:normal;}
+strong{font-size:14px; line-height: 16px; text-align:center; margin-bottom:5px; color:#333; font-weight:normal; display:block;}
+a{font-family:segoe ui, verdana, arial; font-size:13px; line-height:18px; text-decoration:none; color:#111; padding:3px; display:block;}
+
+nav {background: #79C471;}
+nav ul{margin:0 auto; width:510px;}
+nav li{float:left; border-left:1px solid #ccc;}
+nav li a{padding: 15px 10px; display:block; color:#454545; font-size:14px; text-shadow: 0px 1px 1px #fafafa}
+nav li a:hover{text-decoration:none; background:#059BBC; color:#fff; text-shadow: 0px 1px 1px #111;}
+nav li:first-child{border-left:none;}
+
+.contentWrap section{border-top:1px dashed #333; box-shadow:1px 1px 1px #fff;padding: 20px 0 35px;}
+.contentWrap section:first-child{border-top:none;}
+.contentWrap .sectionMid{width: 350px; margin: 0 auto; padding: 15px; background: rgba(244,244,244,0.85);}
+
+article>div{margin-top: 15px; border-top:1px dashed #ccc; padding-top:10px;}
+article>div:first-child{margin-top: 0px; border-top:none; padding-top:0px;}
+article header{margin-bottom: 10px; padding-bottom:5px; border-bottom: 1px dashed #999;}
+article P{margin-bottom: 10px;}
+article P{margin-bottom: 10px;}
+.codeWrap{width:100%; overflow:auto; background:#fafafa; padding: 5px 3px; margin: 10px 0; box-shadow:0px 0px 2px #333;}
+code{font-family:consolas, courier new, courier; display:block;}
+#intro{background:#5f5f5f;}
+#install{background:#059BBC;}
+#demo{background: #007089;}
+.exampleWrap{padding:20px 0; }
+.example{width:350px; margin: 0 auto; background: rgba(244,244,244,0.85); padding: 15px;}
 
 
 /* styling for death note characters */
-.dNoteChars .subAccordMenu {margin-left:1.2em;}
-.treeHeirarchy .subAccordMenu {margin-left:1.2em;}
-.musicList .subAccordMenu {margin-left:1.2em;}
+.dNoteChars .subAccordMenu {margin-left:15px;}
+.treeHeirarchy .subAccordMenu {margin-left:15px;}
+.musicList .subAccordMenu {margin-left:15px;}
 .dNoteChars .rootLink{background:#059BBC;}
 .dNoteChars .parentLink{background:#79C471;}		
 .dNoteChars .selected{background:#F04E2A;}
 
 
 /* styling for BMW cars accordian */
-.bmwCars .selected{text-decoration:underline; color:#059BBC;}
-
+.bmwCars{margin:10px 0;}
+.bmwCars>li{border:1px solid #666; background:#fafafa;}
+.bmwCars>li>a{color:#333;background: #a7c7dc; /* Old browsers */
+background: -moz-linear-gradient(top,  #a7c7dc 0%, #85b2d3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a7c7dc), color-stop(100%,#85b2d3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #a7c7dc 0%,#85b2d3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #a7c7dc 0%,#85b2d3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #a7c7dc 0%,#85b2d3 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #a7c7dc 0%,#85b2d3 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c7dc', endColorstr='#85b2d3',GradientType=0 ); /* IE6-9 */
+padding: 5px; display:block;}
+.bmwCars a:hover{background: #00b7ea; /* Old browsers */
+background: -moz-linear-gradient(top,  #00b7ea 0%, #009ec3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#009ec3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #00b7ea 0%,#009ec3 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 ); /* IE6-9 */
+} 
+.bmwCars .selected{background: #00b7ea; /* Old browsers */
+background: -moz-linear-gradient(top,  #00b7ea 0%, #009ec3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#009ec3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #00b7ea 0%,#009ec3 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 ); /* IE6-9 */
+}
+.bmwCars .subAccordMenu{margin:15px 10px; }
 /* music list */
-.musicList
+.musicList{}
 
 
 
 /* tree styles */
 .treeHeirarchy li{list-style:none;}
-.treeHeirarchy a{padding:10px 10px 10px 35px; display:inline-block;}
+.treeHeirarchy a{padding:10px 10px 10px 35px; display:inline-block; margin-bottom:5px;}
 
 .treeHeirarchy .library{background:url(../img/tree/lib.png) no-repeat left center;}
 .treeHeirarchy .folder{background:url(../img/tree/folder.png) no-repeat left center;}
@@ -54,4 +108,4 @@ a{font-family:segoe ui, verdana, arial; font-size:1em; line-height:1.6em; text-d
 .treeHeirarchy .pdf{background:url(../img/tree/pdf.png) no-repeat left center;}
 .treeHeirarchy .parentLink{border: 1px solid #79C471 !important;}		
 .treeHeirarchy .rootLink{border: 1px solid #059BBC !important;}
-.treeHeirarchy .selected{background-color:#DBE9F2 !important; border:1px solid #3872C4}
+.treeHeirarchy .selected{background-color:#DBE9F2 !important; border:1px solid #3872C4;}

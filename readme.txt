@@ -6,11 +6,11 @@ get the latest build from: http://github.com/sharmik/accordMenu
 
 ## Features
 
-* Intelligently detects list heirarchy and adapts to any ordered and unordered list.
+* Intelligently detects list heirarchy and adapts to any ordered or unordered list.
 * Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE7+).
 * 3 CSS styles added for out of the box use.
 * Manage Selected heirarchy links for upto 3 levels by adding custom classes to root link, parent link and selected link.
-* Control over closing/opening behavior of accordian siblings and parents.
+* Control over closing/opening behavior of accordians children, siblings and parents.
 * Slide or Hide your content with animation
 * Light weight 1.5Kb when minified.
 * Designed with progressive enhancement in mind. Keeping room for additional features.

@@ -25,8 +25,7 @@
 				mainLink: 'rootLink'				
 			});
 			$(".musicList").accordMenu({
-				selLink: 'active'
-				
+				selLink: 'active'				
 			});
 			$(".treeHeirarchy").accordMenu({
 				keepParentOpen: true,
@@ -37,174 +36,253 @@
 		});
 	</script>
 </head>
-<body class="body">
-	<div class="wrap">
-		<div class="hgroup">
-			<h1>accordMenu Example</h1>
-			<h2>a jQuery Accordian and/or Menu</h2>
-		</div>
-		<div class="exampleWrap">
-			<h3>Single Level accordMenu at default Settings</h3>
-			<ul class="bmwCars">
-				<li><a href="#">BMW M3</a>
-					<div>
-						<h4>BMW M3</h4>
-						<p>The BMW M3 is a high-performance version of the BMW 3-Series, developed by BMW's in-house motorsport division, BMW M.</p>
-					</div>
-				</li>
-				<li><a href="#">BMW M5</a>
-					<div>
-						<h4>BMW M5</h4>
-						<p>The BMW M5 is a high performance version of the BMW 5-Series executive car built by the Motorsport division of BMW. First introduced at the Amsterdam Motor Show in 1984.</p>
-					</div>
-				</li>
-				<li><a href="#">BMW M6</a>
-					<div>
-						<h4>BMW M6</h4>
-						<p>The BMW M6 is a high-performance version of the 6-Series automobile, designed by the motorsport division of BMW. The BMW M6 was produced from 1983 to 1989, and then 2005 to 2010.</p>
-					</div>
-				</li>
+<body>
+	<header>
+		<hgroup>
+			<h1>accordMenu.js</h1>
+			<h2>accordian and/or Menu</h2>
+		</hgroup>
+		<nav>
+			<ul class="clearfix">
+				<li><a href="#intro">About accordMenu</a></li>
+				<li><a href="#demo">Demo</a></li>
+				<li><a href="#install">How to use</a></li>
+				<li><a href="#options">API and Options</a></li>
+				<li><a href="#options">Bugs/Reports</a></li>
 			</ul>
-		</div>
-		<div class="exampleWrap">
-			<h3>Multi Level accordMenu with custom class for selected link</h3>
-			<ul class="musicList">
-				<li><a href="#">Automatic Playlists</a>
-					<ol>
-						<li><a href="#">Most Played Artists</a>
-							<ol>
-								<li><a href="#">Iron Maiden</a></li>
-								<li><a href="#">Epica</a></li>
-								<li><a href="#">Eminem</a></li>
-								<li><a href="#">Mohit Chauhan</a></li>
-								<li><a href="#">Arcade Fire</a></li>
-							</ol>
+		</nav>			
+	</header>
+	<section class="contentWrap">
+		<section id="intro">
+			<h3>About accordMenu</h4>
+			<div class="sectionMid">
+				<article>
+					<header>One plugin to accordian them all</header>
+					<p>accordMenu is a plugin that intelligently detects any nested <span>ordered</span> or <span>unordered</span> lists and renders them as vertical accordians.</p>
+					<p>At default settings accordMenu is just another accordian, however power users can get total control on the behavior of the plugin by tweaking its many options.</p>		
+				</article>
+			</div>
+		</section>
+		<section id="install">
+			<h3>How to Use</h4>
+			<div class="sectionMid">
+				<article>
+					<div>
+						<h4>1. Add reference link to jQuery</h4>
+						<h5>Note: Do not add 2 jQuery instances. Preferably use the CDN link</h5>
+						<div class="codeWrap"><code>&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"&gt;&lt;/script&gt;</code></div>
+					</div>
+					<div>
+						<h4>2. Add reference link to accordMenu</h4>
+						<h5>Note: Ensure that jQuery is linked before using accordMenu </h5>
+						<div class="codeWrap"><code>&lt;script type="text/javascript" src="js/jquery.accordMenu.min.js"&gt;&lt;/script&gt;
+						</code></div>
+					</div>
+					<div>
+						<h4>3. HTML Template</h4>
+						<div class="codeWrap">
+							<pre><code>&lt;ul class="accordThis"&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Link1&lt;/a&gt;
+    &lt;div&gt;Content for Link1&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Link2&lt;/a&gt;
+    &lt;ul&gt;
+	&lt;li&gt;Nested accordian&lt;li&gt;
+    &lt;/ul&gt;
+&lt;/ul&gt;
+							</code></pre>
+						</div>
+					</div>
+					<div>
+						<h4>Run accordMenu on the list</h4>					
+						<h5>Note: Currently accordMenu runs only on a Class and Not an ID.</h5>
+						<div class="codeWrap"><code>$(".accordThis ").accordMenu();</code></div>
+					</div>
+				</article>
+			</div>
+		</section>
+		<section id="demo">
+			<h3>Demo</h3>
+			<div class="exampleWrap bmw">
+				<div class="example accordians">
+					<div class="description">
+						<h4>Single Level accordMenu at default Settings</h3>
+						<div class="codeWrap"><code>$(".bmwCars").accordMenu();</code></div>
+						<p>By default: accordMenu adds a ".selected" class to every accordian anchor link. It is smart enough to differentiate between an anchor link for the accordian vs a content anchor link</p>
+					</div>
+					<ul class="bmwCars">
+						<li><a href="#">BMW M3</a>
+							<div>
+								<strong>BMW M3</strong>
+								<p>The BMW M3 is a high-performance version of the BMW 3-Series, developed by BMW's in-house motorsport division, BMW M.</p>
+							</div>
 						</li>
-						<li><a href="#">Most Played Albums</a>
-							<ol>
-								<li><a href="#">Encore</a></li>
-								<li><a href="#">No Prayer for the Dying</a></li>
-								<li><a href="#">Live at Metal Camp</a></li>
-								<li><a href="#">The Phantom Agony</a></li>
-								<li><a href="#">Rockstar</a></li>
-							</ol>
+						<li><a href="#">BMW M5</a>
+							<div>
+								<strong>BMW M5</strong>
+								<p>The BMW M5 is a high performance version of the BMW 5-Series executive car built by the Motorsport division of BMW. First introduced at the Amsterdam Motor Show in 1984.</p>
+							</div>
 						</li>
-						<li><a href="#">Most Played Artists</a>
-							<ol>
-								<li><a href="#">Not Afraid</a></li>
-								<li><a href="#">Death Note</a></li>
-								<li><a href="#">Nadaan Parindey</a></li>
-								<li><a href="#">Death of a Dream</a></li>
-								<li><a href="#">Sprawl II (Mountains Beyond Mountains)</a></li>
-							</ol>
-						</li>
-					</ol>
-				</li>
-			</ul>
-		</div>
-		<div class="exampleWrap">
-			<h3>3 Level Carousel Menu</h3>
-			<ul class="dNoteChars">
-				<li><a href="#">Team Kira</a>
-					<ul>
-						<li><a href="#">Light Yagami</a></li>
-						<li><a href="#">Misa Amane</a></li>
-						<li><a href="#">Teru Mikami</a></li>
-						<li><a href="#">Kiyomi Takada</a></li>
-						<li><a href="#">All Shinigami</a>
-							<ul>
-								<li><a href="#">Ryuk</a></li>
-								<li><a href="#">Rem</a></li>
-								<li><a href="#">Sidoh</a></li>
-								<li><a href="#">Gelus</a></li>
-							</ul>
+						<li><a href="#">BMW M6</a>
+							<div>
+								<strong>BMW M6</strong>
+								<p>The BMW M6 is a high-performance version of the 6-Series automobile, designed by the motorsport division of BMW. The BMW M6 was produced from 1983 to 1989, and then 2005 to 2010.</p>
+							</div>
 						</li>
 					</ul>
-				</li>
-				<li ><a href="#">Team Justice</a>
-					<ul>
-						<li><a href="#">L</a></li>
-						<li><a href="#">Mello</a></li>
-						<li><a href="#">Matt</a></li>
-						<li><a href="#">Near</a></li>
-						<li><a href="#">Japanese Task Force</a>
-							<ul>
-								<li><a href="#">Soichiro yagami</a></li>
-								<li><a href="#">Suichi Aizawa</a></li>
-								<li><a href="#">Kanzo Mogi</a></li>
-								<li><a href="#">Touta Matsuda</a></li>
-								<li><a href="#">Hideki Ide</a></li>
-							</ul>
+				</div>
+			</div>
+			<div class="exampleWrap music">
+				<div class="example">
+					<h4>Multi Level accordMenu with custom class for selected link</h3>
+					<div class="codeWrap"><pre><code>$(".musicList").accordMenu({
+	selLink: 'active'
+});</code></div></pre>
+					<ul class="musicList">
+						<li><a href="#">Automatic Playlists</a>
+							<ol>
+								<li><a href="#">Most Played Artists</a>
+									<ol>
+										<li><a href="#">Iron Maiden</a></li>
+										<li><a href="#">Epica</a></li>
+										<li><a href="#">Eminem</a></li>
+										<li><a href="#">Mohit Chauhan</a></li>
+										<li><a href="#">Arcade Fire</a></li>
+									</ol>
+								</li>
+								<li><a href="#">Most Played Albums</a>
+									<ol>
+										<li><a href="#">Encore</a></li>
+										<li><a href="#">No Prayer for the Dying</a></li>
+										<li><a href="#">Live at Metal Camp</a></li>
+										<li><a href="#">The Phantom Agony</a></li>
+										<li><a href="#">Rockstar</a></li>
+									</ol>
+								</li>
+								<li><a href="#">Most Played Artists</a>
+									<ol>
+										<li><a href="#">Not Afraid</a></li>
+										<li><a href="#">Death Note</a></li>
+										<li><a href="#">Nadaan Parindey</a></li>
+										<li><a href="#">Death of a Dream</a></li>
+										<li><a href="#">Sprawl II (Mountains Beyond Mountains)</a></li>
+									</ol>
+								</li>
+							</ol>
 						</li>
-						<li><a href="#">Accounts</a></li>
 					</ul>
-				</li>
-			</ul>
-		</div>
-		<div class="exampleWrap">
-			<h3>accordMenu as a Tree</h3>
-			<ul class="treeHeirarchy">
-				<li><a class="library" href="#">Documents</a>
-					<ul>
-						<li><a class="folder" href="#">Downloads</a>
+				</div>
+			</div>		
+			<div class="exampleWrap menu">
+				<div class="example">
+					<h4>3 Level Carousel Menu</h3>
+					<ul class="dNoteChars">
+						<li><a href="#">Team Kira</a>
 							<ul>
-								<li><a class="folder" href="#">Games</a>
+								<li><a href="#">Light Yagami</a></li>
+								<li><a href="#">Misa Amane</a></li>
+								<li><a href="#">Teru Mikami</a></li>
+								<li><a href="#">Kiyomi Takada</a></li>
+								<li><a href="#">All Shinigami</a>
 									<ul>
-										<li><a class="folder" href="#">Gears of War</a>
+										<li><a href="#">Ryuk</a></li>
+										<li><a href="#">Rem</a></li>
+										<li><a href="#">Sidoh</a></li>
+										<li><a href="#">Gelus</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">Team Justice</a>
+							<ul>
+								<li><a href="#">L</a></li>
+								<li><a href="#">Mello</a></li>
+								<li><a href="#">Matt</a></li>
+								<li><a href="#">Near</a></li>
+								<li><a href="#">Japanese Task Force</a>
+									<ul>
+										<li><a href="#">Soichiro yagami</a></li>
+										<li><a href="#">Suichi Aizawa</a></li>
+										<li><a href="#">Kanzo Mogi</a></li>
+										<li><a href="#">Touta Matsuda</a></li>
+										<li><a href="#">Hideki Ide</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Accounts</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="exampleWrap folders">
+				<div class="example">
+					<h4>accordMenu as a Tree</h3>
+					<ul class="treeHeirarchy">
+						<li><a class="library" href="#">Documents</a>
+							<ul>
+								<li><a class="folder" href="#">Downloads</a>
+									<ul>
+										<li><a class="folder" href="#">Games</a>
 											<ul>
-												<li><a class="exe" href="#">setup.exe</a></li>
-												<li><a class="file" href="#">settings.ini</a></li>
-												<li><a class="folder" href="#">system</a>
+												<li><a class="folder" href="#">Gears of War</a>
 													<ul>
-														<li><a class="file" href="#">data</a></li>
+														<li><a class="exe" href="#">setup.exe</a></li>
+														<li><a class="file" href="#">settings.ini</a></li>
+														<li><a class="folder" href="#">system</a>
+															<ul>
+																<li><a class="file" href="#">data</a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<li><a class="folder" href="#">LF2</a>
+													<ul>
+														<li><a class="exe" href="#">setup.exe</a></li>
+													</ul>
+												</li>
+												<li><a class="folder" href="#">Slender Man</a>
+													<ul>
+														<li><a class="exe" href="#">setup.exe</a></li>
+														<li><a class="file" href="#">settings.ini</a></li>
+														<li><a class="folder" href="#">system</a>
+															<ul>
+																<li><a class="file" href="#">data</a></li>
+															</ul>
+														</li>
 													</ul>
 												</li>
 											</ul>
 										</li>
-										<li><a class="folder" href="#">LF2</a>
+										<li><a class="folder" href="#">PDF's</a>
 											<ul>
-												<li><a class="exe" href="#">setup.exe</a></li>
-											</ul>
-										</li>
-										<li><a class="folder" href="#">Slender Man</a>
-											<ul>
-												<li><a class="exe" href="#">setup.exe</a></li>
-												<li><a class="file" href="#">settings.ini</a></li>
-												<li><a class="folder" href="#">system</a>
+												<li><a class="pdf" href="#">12-14 Colors.pdf</a></li>
+												<li><a class="folder" href="#">Game Dev.</a>
 													<ul>
-														<li><a class="file" href="#">data</a></li>
+														<li><a class="pdf" href="#">Core HTML5 Canvas.pdf</a></li>
+														<li><a class="pdf" href="#">Learning Cocos2d.pdf</a></li>
+														<li><a class="pdf" href="#">Game Development using HTML5 and JavaScript</a></li>
+													</ul>
+												</li>
+												<li><a class="folder" href="#">Zip files</a>
+													<ul>
+														<li><a class="zip" href="#">zen-7.x-5.1.zip</a></li>
+														<li><a class="zip" href="#">accordMenu.zip</a></li>
+														<li><a class="zip" href="#">juanCommerce.zip</a></li>
+														<li><a class="zip" href="#">All Torrent Downloads.zip</a></li>
 													</ul>
 												</li>
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li><a class="folder" href="#">PDF's</a>
-									<ul>
-										<li><a class="pdf" href="#">12-14 Colors.pdf</a></li>
-										<li><a class="folder" href="#">Game Dev.</a>
-											<ul>
-												<li><a class="pdf" href="#">Core HTML5 Canvas.pdf</a></li>
-												<li><a class="pdf" href="#">Learning Cocos2d.pdf</a></li>
-												<li><a class="pdf" href="#">Game Development using HTML5 and JavaScript</a></li>
-											</ul>
-										</li>
-										<li><a class="folder" href="#">Zip files</a>
-											<ul>
-												<li><a class="zip" href="#">zen-7.x-5.1.zip</a></li>
-												<li><a class="zip" href="#">jquery.accordMenu.js.zip</a></li>
-												<li><a class="zip" href="#">juanCommerce.zip</a></li>
-												<li><a class="zip" href="#">All Torrent Downloads.zip</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
+								</li>						
 							</ul>
-						</li>						
+						</li>
 					</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
+				</div>
+			</div>
+		</section>
+	</section>
 </body>
 </html>
