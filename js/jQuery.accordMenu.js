@@ -6,7 +6,7 @@
             var defaults = {
 				keepParentOpen: false,
 				keepSiblingsOpen: false,
-				retainOpen: false, // functionality pending
+				retainOpen: false,
 				animation: 'slide',
 				selLink: 'selected',
 				parLink: '',

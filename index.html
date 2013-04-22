@@ -18,11 +18,11 @@
 	
 	<script>
 		$(document).ready(function(){
-			$(".bmwCars").accordMenu();
 			$(".dNoteChars").accordMenu({
 				selClass: 'selected',
 				parLink: 'parentLink',
-				mainLink: 'rootLink'				
+				mainLink: 'rootLink'				,
+				keepParentOpen: false
 			});
 			$(".musicList").accordMenu({
 				selLink: 'active'				
@@ -30,7 +30,8 @@
 			$(".treeHeirarchy").accordMenu({
 				keepParentOpen: true,
 				keepSiblingsOpen: true,
-				animation: 'slide',
+				retainOpen: true,
+				animation: 'hide',
 				selLink: 'selected'
 			});
 		});
@@ -38,23 +39,23 @@
 </head>
 <body>
 	<header>
-		<hgroup>
+		<div>
 			<h1>accordMenu.js</h1>
 			<h2>accordian and/or Menu</h2>
-		</hgroup>
+		</div>
 		<nav>
 			<ul class="clearfix">
 				<li><a href="#intro">About accordMenu</a></li>
-				<li><a href="#demo">Demo</a></li>
 				<li><a href="#install">How to use</a></li>
+				<li><a href="#demo">Demo</a></li>
 				<li><a href="#options">API and Options</a></li>
-				<li><a href="#options">Bugs/Reports</a></li>
+				<li><a href="#support">Bugs and Support</a></li>
 			</ul>
 		</nav>			
 	</header>
 	<section class="contentWrap">
 		<section id="intro">
-			<h3>About accordMenu</h4>
+			<h3>About accordMenu</h3>
 			<div class="sectionMid">
 				<article>
 					<header>One plugin to accordian them all</header>
@@ -64,7 +65,7 @@
 			</div>
 		</section>
 		<section id="install">
-			<h3>How to Use</h4>
+			<h3>How to Use</h3>
 			<div class="sectionMid">
 				<article>
 					<div>
@@ -89,8 +90,9 @@
   &lt;li&gt;
     &lt;a href="#"&gt;Link2&lt;/a&gt;
     &lt;ul&gt;
-	&lt;li&gt;Nested accordian&lt;li&gt;
+	&lt;li&gt;Nested accordian&lt;/li&gt;
     &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 							</code></pre>
 						</div>
@@ -100,6 +102,7 @@
 						<h5>Note: Currently accordMenu runs only on a Class and Not an ID.</h5>
 						<div class="codeWrap"><code>$(".accordThis ").accordMenu();</code></div>
 					</div>
+					
 				</article>
 			</div>
 		</section>
@@ -107,10 +110,11 @@
 			<h3>Demo</h3>			
 			<div class="exampleWrap music">
 				<div class="example">
-					<h4>accordMenu at default settings</h3>
+					<h4>accordMenu at default settings</h4>
+					<h5>No color for active links. Parents, Siblings close on click. Animation as Slide, and open containers not retained.</h5>
 					<div class="codeWrap"><pre><code>$(".musicList").accordMenu({
 	selLink: 'active'
-});</code></div></pre>
+});</code></pre></div>
 					<ol class="musicList">
 						<li><a href="#">Most Played Artists</a>
 							<ol>
@@ -141,39 +145,11 @@
 						</li>
 					</ol>
 				</div>
-			</div>
-			<div class="exampleWrap bmw">
-				<div class="example accordians">
-					<div class="description">
-						<h4>Single Level accordMenu at default Settings</h3>
-						<div class="codeWrap"><code>$(".bmwCars").accordMenu();</code></div>
-						<p>By default: accordMenu adds a ".selected" class to every accordian anchor link. It is smart enough to differentiate between an anchor link for the accordian vs a content anchor link</p>
-					</div>
-					<ul class="bmwCars">
-						<li><a href="#">BMW M3</a>
-							<div>
-								<strong>BMW M3</strong>
-								<p>The BMW M3 is a high-performance version of the BMW 3-Series, developed by BMW's in-house motorsport division, BMW M. M3 models have been derived from the 3-series</p>
-							</div>
-						</li>
-						<li><a href="#">BMW M5</a>
-							<div>
-								<strong>BMW M5</strong>
-								<p>The BMW M5 is a high performance version of the BMW 5-Series executive car built by the Motorsport division of BMW. First introduced at the Amsterdam Motor Show in 1984.</p>
-							</div>
-						</li>
-						<li><a href="#">BMW M6</a>
-							<div>
-								<strong>BMW M6</strong>
-								<p>The BMW M6 is a high-performance version of the 6-Series automobile, designed by the motorsport division of BMW. The BMW M6 was produced from 1983 to 1989, and then 2005 to 2010.</p>
-							</div>
-						</li>
-					</ul>
-				</div>
 			</div>			
 			<div class="exampleWrap menu">
 				<div class="example">
-					<h4>3 Level Carousel Menu</h3>
+					<h4>3 Level Carousel Menu</h4>
+					<h5>with different colors for links at every level. Parents, Siblings close on click. Animation as Slide, and open containers not retained.</h5>
 					<ul class="dNoteChars">
 						<li><a href="#">Team Kira</a>
 							<ul>
@@ -213,7 +189,8 @@
 			</div>
 			<div class="exampleWrap folders">
 				<div class="example">
-					<h4>accordMenu as a Tree</h3>
+					<h4>accordMenu as a Tree</h4>
+					<h5>color only for active link. Parents, Siblings remain open on click. Animation as hide, and open containers retained.</h5>
 					<ul class="treeHeirarchy">
 						<li><a class="library" href="#">Documents</a>
 							<ul>
@@ -278,6 +255,34 @@
 				</div>
 			</div>
 		</section>
+		<section id="options">
+			<h3>API and Options</h3>
+			<div class="sectionMid">			
+				<ul class="apiList">
+					<li class="head">Behaviour</li>
+					<li class="clearfix"><span class="tagname">keepParentOpen</span><span class="options">true / false</span><span class="description">When navigating a child link, do you want to close any existing open siblings of the parent (false) or keep them open (true)?</span></li>
+					<li class="clearfix"><span class="tagname">keepSiblingsOpen</span><span class="options">true / false</span><span class="description">When navigating any link, do you want to close any existing open siblings (false) or keep them open (true)?</span></li>
+					<li class="clearfix"><span class="tagname">retainOpen</span><span class="options">true / false</span><span class="description">Do you want any open siblings to retain their current state (true) or close (false).</span></li>
+					<li class="clearfix"><span class="tagname">animation</span><span class="options">'slide' / 'hide'</span><span class="description">Should there be any transition when switching content (slide) or they should close instantly (hide).</span></li>
+					<li class="head">Presentation</li>
+					<li class="clearfix"><span class="tagname">selLink</span><span class="options">color</span><span class="description">What color should be applied to the active link</span></li>
+					<li class="clearfix"><span class="tagname">parLink</span><span class="options">color</span><span class="description">What color should be applied to the immediate parent link</span></li>
+					<li class="clearfix"><span class="tagname">mainLink</span><span class="options">color</span><span class="description">What color should be applied to the root link</span></li>
+				</ul>
+			</div>
+		</section>
+		<section id="support">
+			<h3>Bugs and Support</h3>
+			<div class="sectionMid">
+				<h4>Ideas / Found Bug?</h4>
+				<h5>Log an issue at <a href="http://github.com/sharmik/accordMenu">GitHub</a></h5>
+				<h5>Or</h5>
+				<h5>Drop me an Email <a href="mailto:sharmik@outlook.com">at this address</a></h5>
+			</div>
+		</section>
 	</section>
+	<footer>
+		<small>&copy; Sharmik Thakar under MIT License.</small>
+	</footer>
 </body>
 </html>

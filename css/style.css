@@ -1,4 +1,4 @@
-*{margin:0;padding:0; border-collapse:collapse; text-decoration:none;}
+*{margin:0;padding:0; border-collapse:collapse; text-decoration:none; outline:none;}
 li{list-style:none;}
 img,fieldset{border:none;}
 body {line-height: 15px; font-size: 13px;font-family: Segoe UI, Helvetica, Sans-Serif; color: #333;}
@@ -13,11 +13,8 @@ a:hover{text-decoration:none; color:#111;}
 .hide{display: none;}
 .hidden{visibility: hidden;}
 
-
-
-
 body{border-top:5px solid #F04E2A;}
-hgroup{background-color:#e0e0e0; padding: 15px 0;}
+header>div{background-color:#e0e0e0; padding: 15px 0;}
 h1{font-size:35px; line-height: 45px; text-align:center; text-shadow:1px 1px 1px #fafafa;}
 h2{font-size:25px; line-height: 28px; text-align:center; text-shadow:1px 1px 1px #fafafa;}
 h3{font-size:22px; line-height: 25px; text-align:center; text-shadow:1px 1px 0px #333; margin-bottom:5px; color:#e0e0e0;  font-weight:normal;}
@@ -27,7 +24,7 @@ strong{font-size:14px; line-height: 16px; text-align:center; margin-bottom:5px; 
 a{font-family:segoe ui, verdana, arial; font-size:13px; line-height:18px; text-decoration:none; color:#111; padding:3px; display:block;}
 
 nav {background: #79C471;}
-nav ul{margin:0 auto; width:520px;}
+nav ul{margin:0 auto; width:540px;}
 nav li{float:left; border-left:1px solid #ccc;}
 nav li a{padding: 15px 10px; display:block; color:#454545; font-size:14px; text-shadow: 0px 1px 1px #fafafa}
 nav li a:hover{text-decoration:none; background:#059BBC; color:#fff; text-shadow: 0px 1px 1px #111;}
@@ -54,44 +51,19 @@ code{font-family:consolas, courier new, courier; display:block;}
 /* styling for death note characters */
 .dNoteChars .subAccordMenu {margin-left:15px;}
 .treeHeirarchy .subAccordMenu {margin-left:15px;}
-.musicList .subAccordMenu {margin-left:15px;}
 .dNoteChars .rootLink{background:#059BBC;}
 .dNoteChars .parentLink{background:#79C471;}		
 .dNoteChars .selected{background:#F04E2A;}
 
 
-/* styling for BMW cars accordian */
-.bmwCars{margin:10px 0;}
-.bmwCars>li{border:1px solid #666; background:#fafafa;}
-.bmwCars>li>a{color:#333;background: #a7c7dc; /* Old browsers */
-background: -moz-linear-gradient(top,  #a7c7dc 0%, #85b2d3 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a7c7dc), color-stop(100%,#85b2d3)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #a7c7dc 0%,#85b2d3 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #a7c7dc 0%,#85b2d3 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #a7c7dc 0%,#85b2d3 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #a7c7dc 0%,#85b2d3 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c7dc', endColorstr='#85b2d3',GradientType=0 ); /* IE6-9 */
-padding: 5px; display:block;}
-.bmwCars a:hover{background: #00b7ea; /* Old browsers */
-background: -moz-linear-gradient(top,  #00b7ea 0%, #009ec3 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#009ec3)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #00b7ea 0%,#009ec3 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 ); /* IE6-9 */
-} 
-.bmwCars .selected{background: #00b7ea; /* Old browsers */
-background: -moz-linear-gradient(top,  #00b7ea 0%, #009ec3 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#009ec3)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #00b7ea 0%,#009ec3 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 ); /* IE6-9 */
-}
-.bmwCars .subAccordMenu{margin:15px 10px; }
-/* music list */
+/* styling for music list accordian */
+.musicList{margin:10px 0;}
+.musicList>li{border:1px solid #666; background:#fafafa;}
+.musicList>li>a{color:#333;background: #a7c7dc; background: linear-gradient(to bottom,  #a7c7dc 0%,#85b2d3 100%); padding: 5px; display:block;}
+.musicList>li>a.active, .musicList>li>a.active:hover{background: #00b7ea; background: linear-gradient(to bottom,  #00b7ea 0%,#009ec3 100%); text-decoration:none;}
+.musicList ol {padding:5px 0;}
+.musicList ol a{padding:3px 15px 3px 35px; display:block;}
+.musicList ol a.active, .musicList ol a.active:hover{background:url(../img/play.png) no-repeat 10px center #ccc;}
 .musicList{}
 
 
@@ -109,3 +81,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', end
 .treeHeirarchy .parentLink{border: 1px solid #79C471 !important;}		
 .treeHeirarchy .rootLink{border: 1px solid #059BBC !important;}
 .treeHeirarchy .selected{background-color:#DBE9F2 !important; border:1px solid #3872C4;}
+
+
+
+
+/* api styles */
+#options{background:#333;}
+.apiList li>span{float:left; margin-left: 5px;}
+.apiList li.head{font-weight:bold; margin-bottom:10px; color:#bc0001;}
+.apiList li{margin-bottom:10px;}
+.apiList li span.tagname{font-weight:bold;}
+.apiList li>span.options{font-style:italic;}
+.apiList li>span.description{width:100%; margin-top:3px;}
+
+#support{background:#2199E3;}
+footer{text-align:center; background:#E0E0E0;}
+footer small{text-align:center;}
