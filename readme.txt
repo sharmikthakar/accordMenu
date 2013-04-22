@@ -63,7 +63,7 @@ Anyone and everyone is welcome to contribute towards enhancing the features of t
 
 * Source: http://github.com/sharmikthakar/accordMenu
 * Twitter: http://twitter.com/sharmikthakar
-* Ideas / Found Bug? Log an issue at http://github.com/sharmik/accordMenu
+* Ideas / Found Bug? Log an issue at http://github.com/sharmikthakar/accordMenu
 
 ## Next Build v2
 
