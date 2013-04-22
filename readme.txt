@@ -2,7 +2,8 @@
 
 accordMenu is a jQuery plugin that transforms a multilevel list menu into an accordian and/or menu with immense customization options.
 
-get the latest build from: http://github.com/sharmik/accordMenu
+get the latest build from: http://github.com/sharmikthakar/accordMenu
+watch the plugin in action on its page sharmikthakar.com/accordmenu
 
 ## Features
 
