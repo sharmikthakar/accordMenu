@@ -9,7 +9,6 @@ watch the plugin in action on its page https://sharmikthakar.com/accordmenu
 
 * Intelligently detects list heirarchy and adapts to any ordered or unordered list.
 * Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE7+).
-* 3 CSS styles added for out of the box use.
 * Manage Selected heirarchy links for upto 3 levels by adding custom classes to root link, parent link and selected link.
 * Control over closing/opening behavior of accordians children, siblings and parents.
 * Slide or Hide your content with animation
@@ -62,7 +61,7 @@ Anyone and everyone is welcome to contribute towards enhancing the features of t
 
 ## Project information
 
-* Source: http://github.com/sharmik/accordMenu
+* Source: http://github.com/sharmikthakar/accordMenu
 * Twitter: http://twitter.com/sharmikthakar
 * Ideas / Found Bug? Log an issue at http://github.com/sharmik/accordMenu
 
